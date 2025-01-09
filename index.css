@@ -11,8 +11,8 @@
 
 :root {
     --purple-200: #9a7bd1;
-    --purple-500: #6b36c8;
-    --purple-800: #441f88;
+    --purple-500: #ae8cea;
+    --purple-800: #a071f7;
 
     --black-800: #171717;
 
@@ -34,17 +34,18 @@ body {
 
 /* Definindo as configurações de títulos e paragrafo */
 h1{
-    color: var(--white);
-    font-size: 2rem;
+    color: rgb(9, 9, 93);
+    font-size: 24px;
     font-weight: 700;
 }
 
 h2{
     padding: 1rem;
     color: var(--black-800);
-    font-size: 1.5rem;
+    font-size: 18px;
     font-weight: 600;
     text-align: left;
+    color:#9a7bd1;
 }
 
 h3{
@@ -58,18 +59,30 @@ h3{
 p{
     font-size: 1rem;
     line-height: 1.5rem;
-    text-align: justify;
+    text-align: left;
     padding: 0.5rem 0;
 }
+/* Definindo as configurações do Flexbox */
 
-/* Estilização da Seção Header */
-#header_content {
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex_start {
+    display: flex;
+    justify-content: flex-start;
+}
+ 
+ /* Estilização da Seção Header */
+ #header_content {
     height: 80px;
     position: sticky; 
     top: 0; 
     width: 100%; 
     justify-content: space-between;
-    padding: 24px;
+    padding: 18px;
     background-color: var(--purple-800);
     border-bottom: 1px solid var(--purple-500);
 }
@@ -81,38 +94,47 @@ p{
  
  #menu li a {
     text-decoration: none;
-    color: var(--white);
+    color: var(--purple-200);
     font-size: 20px;
  }
  
  #menu li a:hover {
-    color: var(--purple-200);
+    color: var(--white-200);
     text-decoration: underline;
  }
  
  /* Estilização da Seção About */
 
  #about{
-    flex-direction: column;
     margin: 2rem auto;
     width: 90%;
+    color: black;
+    display: flex;
+    flex-direction:initial;
+
  }
 
 #conteudo{
     flex-direction: row;
     gap: 2rem;
+   
+
 
 }
 
-.img_profile{
+#profile{
     width: 200px;
+    border-radius: 50%;
+    border-style:groove;
 }
+ 
+/* Estilização da Seção Video */
 
 #video{
     flex-direction: column;
-    margin:2rem auto;
+    margin: 2rem auto;
     width: 90%;
-}
+ }
 
 /* Estilização da Seção Footer */
 
@@ -128,9 +150,10 @@ footer{
 
 #redes_sociais {
     display: flex;
-    justify-content: space-evenly; 
+    justify-content: flex-start;
     margin: 1rem 0 0 0;
-    width: 320px;
+    width: 20px;
+    
 }
 
 .social_icon {
@@ -157,3 +180,74 @@ footer{
             contrast(88%);
 }
 
+ /*Estilização da Página de Contato*/
+ 
+ #contact{
+    flex-direction: row;
+    gap: 2rem;
+ }
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border: none;
+}
+
+form label {
+    font-size: 1rem;
+    text-align: left;
+    font-weight: 500;
+}
+
+form input,
+textarea {
+    margin: 0.5rem 0 1rem;
+    padding: 0.5rem;
+    border-radius: 1.25rem;
+    border: none;
+    width: 100%;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: none;
+    height: 5rem;
+}
+
+form span{
+    margin: 0 0 0.5rem 0.75rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: red;
+}
+
+form button {
+    text-align: center;
+    padding: 0.75rem 2rem;
+    background: var(--purple-800);
+    border: 1px solid var(--purple-500);
+    color: var(--white);
+    border-radius: 0.75rem;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+form button:hover {
+    background: var(--purple-500);
+}
+
+/* Estilização do Mapa */
+#mapa{
+    width: 480px;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+#endereco > p{
+    font-size: 1rem;
+    text-align: justify;
+    font-weight: 600;
+}
